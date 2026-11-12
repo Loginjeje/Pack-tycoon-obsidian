@@ -19,7 +19,7 @@ Dinero con su moneda · contador de monedas de rebirth (cerdito dorado pegado al
 
 ### Ajustes (`settings_panel.gd`)
 
-Volumen (MÚSICA y SONIDOS, deslizadores de pixel art con sus buses), pantalla completa, venta automática, fila de AUTO GUARDAR (gris hasta comprarlo en el árbol; luego botón ELEGIR → `AutoStorePanel` con 4 tipos × 10 notas × 4 rarezas; por defecto todos los tipos y rarezas y notas 8-10), y FICHA DEL OBJETO (siempre / lo bueno / nunca). No hay selector de idioma.
+Volumen (MÚSICA y SONIDOS, deslizadores de pixel art con sus buses), pantalla completa, venta automática, fila de AUTO GUARDAR (gris hasta comprarlo en el árbol; luego botón ELEGIR → `AutoStorePanel` con 5 tipos × 10 notas × 4 rarezas, que caben en el panel desde 2026-11-12; por defecto todos los tipos y rarezas y notas 8-10), y FICHA DEL OBJETO (siempre / lo bueno = épico y legendario / nunca). No hay selector de idioma.
 
 ## Teclas (`game.gd::_hotkey`, solo con la mesa despejada)
 

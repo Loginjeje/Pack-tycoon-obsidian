@@ -15,7 +15,7 @@ Volver a [[00 Inicio]].
    - **Golpe perfecto**: pulsar cuando el anillo pasa del 80 % → golpe inmediato ×1,5 (ver [[Eventos, habilidades y libreta]]).
    - Críticos con el Ojo verde (×2 base, más con el Láser).
 3. **Revelado** — al llegar a 0 sale la **tarjeta de revelado**: objeto, rareza, estado, nota PSA y valor. Botones **GUARDAR** (inventario) y **VENDER**. **Solo se cierra eligiendo**: `ESPACIO`/`ENTER`/`ESC` = GUARDAR.
-   - La tarjeta solo sale para lo bueno (por defecto): raro o mejor, PSA ≥ 8, o nuevo en la libreta. **Lo demás se vende en el momento** con un rótulo flotante (nombre, PSA, lo que paga). Ajustable: siempre / lo bueno / nunca.
+   - La tarjeta solo sale para lo bueno (por defecto): **épico o legendario**, la nota PSA no cuenta (`Game.CARD_GOOD_RARITIES`). **Lo demás se vende en el momento** con un rótulo flotante (nombre, PSA, lo que paga). Ajustable: siempre / lo bueno / nunca.
    - Medio segundo de bloqueo al aparecer (`RevealCard.arm_delay_ms`) y un clic fuera no la cierra: evita saltársela haciendo spam.
    - Efecto "casi": a veces la rareza sube un momento y vuelve (`NEAR_MISS_CHANCE` 25 %).
 4. **Mesa: SOLO SOBRES.** Desde 2026-11-12 ningún objeto se queda en la mesa ("sin limbo"): todo acaba en el inventario o vendido al salir. Se quitaron el botón VENDER de la barra, la tecla `V` y la mejora MESA LIMPIA. Los sobres se pueden **arrastrar**; caben **8** (el Cajón amplía) y caen en una rejilla buscando sitio sin solapar.
