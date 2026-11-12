@@ -29,9 +29,11 @@ scripts/
                 pixel_number.gd, damage_popup.gd, pixel_slider.gd, timer_ring.gd
   screens/      game.gd (la partida, ~2.250 líneas), menu, shop_panel, item_card,
                 auto_buy_panel, auto_store_panel, locker_panel, rebirth_panel (~960),
-                skill_card, reveal_card, settings_panel, libreta_panel, table_element (~720)
+                skill_card, reveal_card, settings_panel, credits_panel, libreta_panel,
+                table_element (~720)
 Sprites/        ~460 PNG en subcarpetas; Sprites/index.tsv = nombre corto -> ruta
-Sounds/         11 WAV (10 sfx + 1 música); Sounds/index.tsv
+Sounds/         11 WAV (10 sfx + 1 música vieja) + music_streamcafe.ogg (la de fondo, 1 h);
+                Sounds/index.tsv
 dev/            SmokeTest, InputTest, BalanceTest (balance.gd), Screenshots, probes
 tools/          generadores de Python (sprites, sonidos, fuente, fondos, maquetas)
 source_art/     arte de partida, no lo usa el juego

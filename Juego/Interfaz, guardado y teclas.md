@@ -11,7 +11,7 @@ Volver a [[00 Inicio]].
 
 - **Menú** (`menu.gd`): JUGAR y AJUSTES, fondo de trastienda. Nada de rebirth aquí.
 - **Partida** (`game.gd`): columna de sobres a la izquierda (fondo negro opaco, raya dorada), mesa (`bg_table`, 1344×752), barra de arriba, vitrina abajo, libreta abajo a la izquierda.
-- **Paneles** (entran con rebote desde el centro): Tienda, Armario, Rebirth/árbol, Libreta, Ajustes, tarjeta de revelado, mini menú de compra automática, filtro de auto guardar.
+- **Paneles** (entran con rebote desde el centro): Tienda, Armario, Rebirth/árbol, Libreta, Ajustes, Créditos (desde Ajustes), tarjeta de revelado, mini menú de compra automática, filtro de auto guardar.
 
 ### Barra de arriba (izquierda → derecha)
 
@@ -20,6 +20,8 @@ Dinero con su moneda · contador de monedas de rebirth (cerdito dorado pegado al
 ### Ajustes (`settings_panel.gd`)
 
 Volumen (MÚSICA y SONIDOS, deslizadores de pixel art con sus buses), pantalla completa, venta automática, fila de AUTO GUARDAR (gris hasta comprarlo en el árbol; luego botón ELEGIR → `AutoStorePanel` con 5 tipos × 10 notas × 4 rarezas, que caben en el panel desde 2026-11-12; por defecto todos los tipos y rarezas y notas 8-10), y FICHA DEL OBJETO (siempre / lo bueno = épico y legendario / nunca). No hay selector de idioma.
+
+Abajo a la derecha, un botón pequeño **CREDITOS** abre `CreditsPanel` (`credits_panel.gd`): la música de **Stream Cafe** con el enlace del vídeo. El enlace va con la fuente por defecto de Godot (la del juego solo tiene mayúsculas y el id de YouTube distingue mayúsculas) y se puede pulsar para abrirlo. **No quitarlo**: la música es libre solo dando el crédito.
 
 ## Teclas (`game.gd::_hotkey`, solo con la mesa despejada)
 
@@ -45,4 +47,5 @@ Paneles con rebote, sobres que caen y aplastan la mesa, botones que crecen al pa
 
 ## Sonido
 
-11 WAV generados por `tools/make_sounds.py`: `sfx_buy`, `sfx_click`, `sfx_error`, `sfx_open`, `sfx_rare`, `sfx_rip`, `sfx_sell`, `sfx_sell_all`, `sfx_toggle`, `sfx_tool` y la música `music_backroom` en bucle.
+- **Música de fondo** (desde 2026-11-12): `music_streamcafe`, el recopilatorio "1 hour of comfy & relaxing songs" de **Stream Cafe** (https://www.youtube.com/watch?v=TQvXEza4fPc), entero (58:52), en OGG de ~29 MB y en bucle (`Sound._make_loop` pone `loop` al OGG). El nombre está en `Sound.MUSIC`. Crédito obligatorio: "Stream Cafe - <enlace>", en Ajustes > CREDITOS. Cómo se sacó: `pack-tycoon/Sounds/README.md`.
+- 11 WAV generados por `tools/make_sounds.py`: `sfx_buy`, `sfx_click`, `sfx_error`, `sfx_open`, `sfx_rare`, `sfx_rip`, `sfx_sell`, `sfx_sell_all`, `sfx_toggle`, `sfx_tool` y la música vieja `music_backroom` (ya no suena). El OGG no lo genera: va en la tabla `EXTERNAL` del generador para que el índice no lo pierda.
