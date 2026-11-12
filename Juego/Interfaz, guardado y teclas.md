@@ -9,7 +9,7 @@ Volver a [[00 Inicio]].
 
 ## Pantallas
 
-- **Intro** (`intro.gd`, `IntroScreen`, desde 2026-11-12): sale al abrir el juego, antes del menú. Cuento mudo de 5 viñetas estilo *The Binding of Isaac* (~17 s): chaval de noche con el móvil → vídeo vertical tipo TikTok (sobre → carta MITO, "+1.000.000", corazones, comentarios) → ojos de moneda → rompe la hucha → trastienda llena de sobres. **Clic o tecla = saltar.** El chaval es pixel art escrito con letras en el script (`KID`, clase `Pix`). Solo sale si `Main` es la escena principal (los tests de `dev/` van directos al menú).
+- **Intro** (`intro.gd`, `IntroScreen`, desde 2026-11-12): sale al abrir el juego, antes del menú. Cuento mudo de 5 viñetas estilo *The Binding of Isaac* (~17 s): chaval de noche con el móvil → vídeo vertical tipo TikTok (sobre → carta MITO, "+1.000.000", corazones, comentarios) → ojos de dólar (dibujados en el pixel art) → rompe la hucha → trastienda llena de sobres. **Clic o tecla = saltar.** El chaval es pixel art escrito con letras en el script (`KID`, clase `Pix`). Solo sale si `Main` es la escena principal (los tests de `dev/` van directos al menú).
 - **Menú** (`menu.gd`): JUGAR y AJUSTES, fondo de trastienda. Nada de rebirth aquí.
 - **Partida** (`game.gd`): columna de sobres a la izquierda (fondo negro opaco, raya dorada), mesa (`bg_table`, 1344×752), barra de arriba, vitrina abajo, libreta abajo a la izquierda.
 - **Paneles** (entran con rebote desde el centro): Tienda, Armario, Rebirth/árbol, Libreta, Ajustes, Créditos (desde Ajustes), tarjeta de revelado, mini menú de compra automática, filtro de auto guardar.
