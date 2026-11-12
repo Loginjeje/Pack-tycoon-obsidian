@@ -20,6 +20,8 @@ Volver a [[00 Inicio]]. Código: `LootDB.REBIRTH_*`, `scripts/data/skill_tree.gd
 
 **Cada nodo tiene nombre** (`effect` en `SkillTree.NODES`): sale debajo de la chapa y de título en la ficha; el número va en la ficha (AHORA / AL COMPRARLO). En el juego, sin tildes ni Ñ (la fuente no las tiene).
 
+**Cada nodo tiene su propio dibujo** (desde 2026-11-12): `tree_<id>.png` en `Sprites/tree/`, generado por `tools/tree_designs.py` (el objeto del nombre: NUDILLOS puño americano, MAZA maza con pinchos, MARTILLO mazo, CACTUS cactus, ERIZO erizo, FIESTA matasuegras, LEYENDA corona...). Antes reutilizaban sprites del stat (sobre de cartas, zapatillas...).
+
 Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre); zoom con dos lupas (hasta 1/6). Las líneas entre nodos son **pixel art azul** (escalera de celdas con contorno; azul noche cerrado, azul comprable, celeste comprado). **Pulsar un nodo abre su ficha**; se compra con COMPRAR. Cada nodo pide el anterior (`req`, puede ser lista). Colores: dorado comprado, claro latiendo asequible, apagado caro, cerrado bloqueado.
 
 ### Centro

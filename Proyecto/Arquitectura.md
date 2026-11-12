@@ -31,11 +31,12 @@ scripts/
                 auto_buy_panel, auto_store_panel, locker_panel, rebirth_panel (~960),
                 skill_card, reveal_card, settings_panel, credits_panel, help_panel, intro, libreta_panel,
                 table_element (~720)
-Sprites/        ~460 PNG en subcarpetas; Sprites/index.tsv = nombre corto -> ruta
+Sprites/        ~500 PNG en subcarpetas (tree/ = nodos del árbol); Sprites/index.tsv = nombre corto -> ruta
 Sounds/         11 WAV (10 sfx + 1 música vieja) + music_streamcafe.ogg (la de fondo, 1 h);
                 Sounds/index.tsv
 dev/            SmokeTest, InputTest, BalanceTest (balance.gd), Screenshots, probes
-tools/          generadores de Python (sprites, sonidos, fuente, fondos, maquetas)
+tools/          generadores de Python (sprites, sonidos, fuente, fondos, maquetas;
+                tree_designs.py = un dibujo por nodo del árbol)
 source_art/     arte de partida, no lo usa el juego
 ```
 

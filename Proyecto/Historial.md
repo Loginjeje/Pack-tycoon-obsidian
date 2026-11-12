@@ -50,3 +50,4 @@ Volver a [[00 Inicio]].
 - 2026-11-12 (6): música de fondo nueva, el recopilatorio de una hora de **Stream Cafe** (OGG, `Sound.MUSIC`), y botón **CREDITOS** en Ajustes con su crédito y enlace. Smoke test e input test en verde.
 - 2026-11-12 (7): anillo de carga de 320 a 400 px para que el sobre no tape el tramo del perfecto; **intro** estilo Isaac antes del menú (clic para saltar) y botón **AYUDA** en Ajustes encima de CREDITOS. Smoke test e input test en verde. Sin commitear en `juguetes-mito-balance`.
 - 2026-11-12 (8): en la intro los ojos del chaval se vuelven signos de dólar dibujados en su pixel art (antes, monedas puestas encima).
+- 2026-11-12 (9): un dibujo propio para cada uno de los 38 nodos del árbol (`tools/tree_designs.py` → `Sprites/tree/tree_<id>.png`); ojos de dólar de la intro más bajos (5 px en vez de 7). Smoke e input test en verde.
