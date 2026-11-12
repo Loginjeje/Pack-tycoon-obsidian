@@ -1,0 +1,4 @@
+# Estado local de Obsidian (paneles abiertos, etc.): cambia cada vez que se abre
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
