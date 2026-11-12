@@ -20,7 +20,7 @@ Volver a [[00 Inicio]]. Código: `LootDB.REBIRTH_*`, `scripts/data/skill_tree.gd
 
 **Cada nodo tiene nombre** (`effect` en `SkillTree.NODES`): sale debajo de la chapa y de título en la ficha; el número va en la ficha (AHORA / AL COMPRARLO). En el juego, sin tildes ni Ñ (la fuente no las tiene).
 
-Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre); zoom con dos lupas (hasta 1/4). **Pulsar un nodo abre su ficha**; se compra con COMPRAR. Cada nodo pide el anterior (`req`, puede ser lista). Colores: dorado comprado, claro latiendo asequible, apagado caro, cerrado bloqueado.
+Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre); zoom con dos lupas (hasta 1/6). Las líneas entre nodos son **pixel art azul** (escalera de celdas con contorno; azul noche cerrado, azul comprable, celeste comprado). **Pulsar un nodo abre su ficha**; se compra con COMPRAR. Cada nodo pide el anterior (`req`, puede ser lista). Colores: dorado comprado, claro latiendo asequible, apagado caro, cerrado bloqueado.
 
 ### Centro
 
@@ -55,9 +55,9 @@ Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre)
 | APRENDIZ | Tijeras y Guantes se compran solos (botón AUTO en la tienda) | 3 | auto guardar |
 | AMULETO | Trébol y Ojo verde se compran solos | 4 | aprendiz |
 | ENCARGADO | Armario y Láser se compran solos | 5 | amuleto |
-| **FÁBRICA** (final) | cada partida empieza con Pinchos y PC, lo automático sigue encendido tras el rebirth, offline hasta 2 h | 8 | APRENDIZ, SOBRANTE y ARMARIO SOLO |
+| **FÁBRICA** (final) | cada partida empieza con Pinchos y PC, lo automático sigue encendido tras el rebirth, offline hasta 2 h | 8 | ENCARGADO, SOBRANTE y ARMARIO SOLO (es lo último de la rama, abajo del todo) |
 
-APRENDIZ, AMULETO y ENCARGADO bajan en columna a la izquierda (y 2, 3 y 4 filas bajo el centro). Detalle en [[Tienda]].
+APRENDIZ, AMULETO y ENCARGADO bajan en columna a la izquierda (2, 3 y 4 filas bajo el centro) y FÁBRICA va debajo de todo (fila 5). Detalle en [[Tienda]].
 
 Quitados (devuelven sus monedas al cargar, `SkillTree.REFUND`): ATAJOS (1), SIN FICHA (2), **MESA LIMPIA** (3, la mesa ya no guarda objetos) y **TASADOR** (3, lo sustituye GOLDEN RAIN).
 
@@ -84,9 +84,9 @@ Quitados (devuelven sus monedas al cargar, `SkillTree.REFUND`): ATAJOS (1), SIN 
 | | FIEBRE DEL ORO | dorados un 75 % más a menudo y esperan un 75 % más | 4 |
 | | IMÁN (final) | dorados +50 %, hora feliz +50 %, VIP +25 %, jefe +40 % | 6 |
 
-### LEYENDA (arriba del todo, x1,5)
+### LEYENDA (arriba del todo, x2, oculta)
 
-15 monedas. Pide MAZA, VELOCISTA, PUNTO DULCE y FIEBRE DEL ORO. Da **+100 % de dinero, +50 % de daño, velocidad y Pinchos**, y las habilidades recargan el doble de rápido.
+15 monedas. **Pide el árbol entero** (`SkillTree.reqs_of`) y **no se dibuja hasta que tienes todo lo demás** (`RebirthPanel.node_shown`); va sin líneas, como corona. Da **+100 % de dinero, +50 % de daño, velocidad y Pinchos**, y las habilidades recargan el doble de rápido.
 
 ## Cuánto dura
 
