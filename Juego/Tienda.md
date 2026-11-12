@@ -36,7 +36,7 @@ Volver a [[00 Inicio]]. Datos: `LootDB.ITEMS` y constantes de `loot_db.gd`. Pane
 
 ## Compra automática (botón AUTO)
 
-Nodos del árbol (rama de calidad de vida, columna izquierda): **APRENDIZ** (3 monedas) → Tijeras y Guantes · **AMULETO** (4) → Trébol y Ojo verde · **ENCARGADO** (5) → Armario y Láser. Mapa en `SkillTree.AUTO_ITEMS`.
+Nodos del árbol (rama de calidad de vida): **APRENDIZ** (3 monedas, izquierda) → Tijeras y Guantes · **AMULETO** (4, debajo de APRENDIZ) → Trébol y Ojo verde · **ENCARGADO** (5, a la derecha, debajo de ARMARIO SOLO) → Armario y Láser. Mapa en `SkillTree.AUTO_ITEMS`.
 
 - Debajo de cada caja desbloqueada sale un botón **AUTO**: dorado = se compra solo, gris = no. Al comprar el nodo empiezan encendidos; lo apagado se guarda en `Game.auto_items_off` (de la cuenta, el rebirth no lo toca).
 - `game.gd::_auto_items_step`: cada **0,5 s** sube un nivel del item **más barato** con AUTO (`Game.auto_item_pick`); si el más barato no llega, espera (no salta a uno caro). No compra con el árbol del rebirth ni los ajustes abiertos. Avisa con un rótulo "AUTO: TIJERAS NV 3".

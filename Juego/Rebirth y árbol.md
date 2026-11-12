@@ -54,10 +54,10 @@ Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre)
 | ARMARIO SOLO | con el armario lleno, entra lo mejor y vuelve lo peor | 4 | auto guardar |
 | APRENDIZ | Tijeras y Guantes se compran solos (botón AUTO en la tienda) | 3 | auto guardar |
 | AMULETO | Trébol y Ojo verde se compran solos | 4 | aprendiz |
-| ENCARGADO | Armario y Láser se compran solos | 5 | amuleto |
-| **FÁBRICA** (final) | cada partida empieza con Pinchos y PC, lo automático sigue encendido tras el rebirth, offline hasta 2 h | 8 | ENCARGADO, SOBRANTE y ARMARIO SOLO (es lo último de la rama, abajo del todo) |
+| ENCARGADO | Armario y Láser se compran solos | 5 | armario solo |
+| **FÁBRICA** (final) | cada partida empieza con Pinchos y PC, lo automático sigue encendido tras el rebirth, offline hasta 2 h | 8 | AMULETO, SOBRANTE y ENCARGADO (es lo último de la rama, abajo del todo y en medio) |
 
-APRENDIZ, AMULETO y ENCARGADO bajan en columna a la izquierda (2, 3 y 4 filas bajo el centro) y FÁBRICA va debajo de todo (fila 5). Detalle en [[Tienda]].
+La rama es simétrica: APRENDIZ → AMULETO bajan por la izquierda, ARMARIO SOLO → ENCARGADO por la derecha, SOBRANTE en el centro, y FÁBRICA abajo en medio (fila 4) colgando de los tres. Detalle en [[Tienda]].
 
 Quitados (devuelven sus monedas al cargar, `SkillTree.REFUND`): ATAJOS (1), SIN FICHA (2), **MESA LIMPIA** (3, la mesa ya no guarda objetos) y **TASADOR** (3, lo sustituye GOLDEN RAIN).
 
