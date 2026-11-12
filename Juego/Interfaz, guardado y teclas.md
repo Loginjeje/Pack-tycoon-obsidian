@@ -15,7 +15,7 @@ Volver a [[00 Inicio]].
 
 ### Barra de arriba (izquierda → derecha)
 
-Dinero con su moneda · contador de monedas de rebirth (cerdito dorado pegado al último dígito) · contador de la mesa · iconos de apertura automática, compra automática y ARMARIO · VENDER · TIENDA · REBIRTH (mismo tamaño que TIENDA) · ajustes.
+Dinero con su moneda · contador de monedas de rebirth (cerdito dorado pegado al último dígito) · contador de la mesa · iconos de apertura automática, compra automática y ARMARIO · TIENDA · REBIRTH (mismo tamaño que TIENDA) · ajustes. (El botón VENDER se quitó el 2026-11-12: la mesa ya no tiene objetos.)
 
 ### Ajustes (`settings_panel.gd`)
 
@@ -25,12 +25,11 @@ Volumen (MÚSICA y SONIDOS, deslizadores de pixel art con sus buses), pantalla c
 
 | Tecla | Acción |
 |---|---|
-| `1` `2` `3` | habilidades (si están compradas) |
+| `1` `2` `3` | golpe cargado, frenesí, golden rain (si están compradas) |
 | `T` | tienda |
 | `A` | armario |
 | `R` | árbol del rebirth |
-| `V` | vender todo lo de la mesa |
-| `ESPACIO` / `ENTER` | cerrar la tarjeta dejando el objeto en la mesa |
+| `ESPACIO` / `ENTER` / `ESC` (con tarjeta) | GUARDAR el objeto de la tarjeta |
 | `ESC` | cerrar panel; sin panel, volver al menú (la mesa se guarda tal cual) |
 
 ## Animaciones y "jugo"
@@ -39,6 +38,7 @@ Paneles con rebote, sobres que caen y aplastan la mesa, botones que crecen al pa
 
 ## Guardado
 
+- La mesa guardada son **solo sobres** (`{"pack", "hp", "rain"}`). Un objeto que aparezca en `table` (la tarjeta abierta al cerrar, o un guardado viejo con objetos en la mesa) va **al inventario** al cargar (si está lleno, se vende).
 - `user://packtycoon.json`, automático **cada 30 s si cambió algo** y al salir. Antes de guardar copia el anterior a `.bak`; si el principal falla, carga la copia.
 - Las escenas de `dev/` guardan en `packtycoon_test.json` (el smoke test hace `hard_reset()`; el 2026-11-10 se llevó una partida real por delante, por eso existe esto).
 - **Offline**: con el juego cerrado se gana el **10 %** de lo que se ganaba por segundo (`lifetime_earned / play_seconds`), mínimo 60 s fuera, máximo **1 h (2 h con FÁBRICA)**, y **solo con los Pinchos comprados**. Aviso "MIENTRAS NO ESTABAS". Constantes `Game.OFFLINE_*`.

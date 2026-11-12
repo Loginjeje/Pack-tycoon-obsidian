@@ -62,9 +62,10 @@ permanente.
 5. 10 items en la tienda; las **Tijeras** son el daño (+35 %/nivel) y los **Guantes** la velocidad (+15 %/nivel).
 6. **Armario**: hasta 8 vitrinas; cada tipo sube un stat (cartas daño, vinilos dinero, zapatillas velocidad, electrónica monedas de rebirth, juguetes suerte).
 7. Rebirth a **750.000**; monedas = **7 × (dinero/750.000)^¼** × Electrónica.
-8. Árbol: centro (+50 % dinero, empezar con 25.000) y ramas de daño, velocidad, pinchos, armario/rebirth, calidad de vida, habilidades, puntería y eventos, más LEYENDA.
+8. Árbol (38 nodos, cada uno con nombre): centro TRASTIENDA (+50 % dinero, empezar con 25.000) y ramas de daño, velocidad, pinchos, armario/rebirth, calidad de vida (incluida la compra automática de la tienda), habilidades (golpe cargado, frenesí, golden rain), puntería y eventos, más LEYENDA.
 9. Primer rebirth: **~13,5 min** el jugador normal, ~9 el optimizado, ~8 el automático. Árbol entero: ~2 h.
 10. La interfaz se monta **en código**: las escenas tienen un solo nodo (el editor se ve vacío y es normal).
+11. **En la mesa solo hay sobres**: cada objeto se guarda o se vende al salir, nunca se queda en la mesa.
 
 ## Cómo trabajar en este proyecto (reglas que ya se siguen)
 

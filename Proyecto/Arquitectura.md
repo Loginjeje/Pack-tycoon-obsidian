@@ -49,6 +49,7 @@ Unas 12.600 líneas de GDScript en total.
 - **Clases por `class_name`** (globales), no por ruta.
 - **Números grandes con sprites** (`PixelNumber` compone `num_*.png`); el resto del texto usa la fuente de mapa de bits `font_pack.fnt` (escala solo en múltiplos de 7 px).
 - **El anillo de carga** (`TimerRing`) se pinta celda a celda y va **detrás** del sobre.
+- **La mesa solo tiene sobres:** `TableElement` ya no tiene modo "botín" (se quitaron `setup_loot`, `sell_instant`, la señal `sold`…). Lo que sale de un sobre pasa por `_deliver` y acaba en el inventario o vendido.
 - **Animaciones:** `MainRoot.push_veil/push_overlay` (paneles con rebote), `MainRoot.banner` (carteles de eventos), `MainRoot.confetti`, `UIKit.juice()` (ya dentro de todos los botones), `UIKit.punch` y `UIKit.shake`.
 - **Guardado por posición:** los niveles de los items se leen por índice de `LootDB.ITEMS`; items nuevos siempre al final.
 - **Nodos retirados del árbol** devuelven sus monedas al cargar (`SkillTree.REFUND`).
@@ -68,3 +69,6 @@ Unas 12.600 líneas de GDScript en total.
 | Guardar en inventario | `Game.store(...)` |
 | Pago offline | `game_state.gd` (constantes `OFFLINE_*`) |
 | Atajos de teclado | `game.gd::_hotkey` |
+| Qué pasa con un objeto al salir | `game.gd::_deliver` (auto guardar → venta automática → venta sin ficha → tarjeta) |
+| Golden rain / holo | `Game.rain_left`, `Game.rain_time()`, `Gameplay.make_holo`, `UIKit.holo` (shader) |
+| Compra automática de la tienda | `SkillTree.AUTO_ITEMS`, `Game.item_auto_on`, `Game.auto_item_pick`, `game.gd::_auto_items_step` |

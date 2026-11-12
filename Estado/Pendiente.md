@@ -19,13 +19,14 @@ Volver a [[00 Inicio]].
 
 ## Equilibrio
 
+- [ ] **Medir con el simulador** lo nuevo del 2026-11-12: `dev/balance.gd` no modela la golden rain (holo ×2), la compra automática de la tienda ni que lo que no tiene ficha se venda al momento.
+
 - [ ] Las **zapatillas** del armario son flojas: con varios sobres a la vez limita el clic, no la carga. Hay que cambiar qué hacen, no un número.
 - [ ] La mediana del jugador normal (13,5 min) está cerca del 12 de abajo de la banda del simulador.
 - [ ] Volver a medir `BalanceTest armario`: las cifras del README son de antes de la raíz cuarta y de los juguetes.
 
 ## Desfases encontrados al hacer el vault (2026-11-12)
 
-- [ ] Texto del juego: la ficha del ARMARIO (`LootDB.ITEMS`, `detail`) solo nombra cuatro tipos y no dice que los juguetes dan suerte.
 - [ ] El comentario de `SPIKE_SHARE` habla de "el 60 %", pero la constante vale 1,0.
 - [ ] `Game.FIRST_REBIRTH_COINS = 3` ya no hace nada (con la raíz cuarta ×7, el primer rebirth da 7 como poco).
 - Los `.import` del proyecto salen modificados en git (reimportación del editor); no son cambios de juego.

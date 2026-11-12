@@ -34,6 +34,14 @@ Volver a [[00 Inicio]]. Datos: `LootDB.ITEMS` y constantes de `loot_db.gd`. Pane
   - Tijeras, Guantes y Dólar en dos tramos: las 3 primeras compras suben ×1,4 (`SOFT_COST_GROWTH`) y a partir de ahí ×2,8 (Tijeras y Guantes) o ×2,3 (Dólar) sobre el último precio barato. Dólar: de 900 a ~113.500.
   - PC y Pinchos: un solo pago.
 
+## Compra automática (botón AUTO)
+
+Nodos del árbol (rama de calidad de vida, columna izquierda): **APRENDIZ** (3 monedas) → Tijeras y Guantes · **AMULETO** (4) → Trébol y Ojo verde · **ENCARGADO** (5) → Armario y Láser. Mapa en `SkillTree.AUTO_ITEMS`.
+
+- Debajo de cada caja desbloqueada sale un botón **AUTO**: dorado = se compra solo, gris = no. Al comprar el nodo empiezan encendidos; lo apagado se guarda en `Game.auto_items_off` (de la cuenta, el rebirth no lo toca).
+- `game.gd::_auto_items_step`: cada **0,5 s** sube un nivel del item **más barato** con AUTO (`Game.auto_item_pick`); si el más barato no llega, espera (no salta a uno caro). No compra con el árbol del rebirth ni los ajustes abiertos. Avisa con un rótulo "AUTO: TIJERAS NV 3".
+- Cajón, Dólar, PC y Pinchos no tienen compra automática.
+
 ## Interfaz
 
 Caja de cartón claro (`ui_panel_carton`) con fichas de papel crema y el precio en cinta roja; TIENDA en cinta roja. Puntos de nivel en rojo; al tope pone AL TOPE; las de compra única llevan COMPRA ÚNICA y luego COMPRADO. Un precio que no llega sale en gris (`Palette.PRICE_OFF`). Clic en una ficha abre su `ItemCard` con el efecto actual y el siguiente; la ficha **pide** la compra, la tienda cobra.

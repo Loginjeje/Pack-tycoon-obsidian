@@ -29,7 +29,14 @@ Todo esto se amplía con las ramas de puntería y eventos del [[Rebirth y árbol
 
 ## Habilidades (teclas 1, 2, 3)
 
-Se compran en la rama de arriba del árbol: GOLPE CARGADO (×5 el siguiente golpe, 40 s), FRENESÍ (8 s en que toda la mesa se golpea sola, 90 s), LUPA DEL TASADOR (vuelve a tirar la nota en la tarjeta, 75 s). LEYENDA las recarga el doble de rápido.
+Se compran en la rama de arriba del árbol: GOLPE CARGADO (×5 el siguiente golpe, 40 s), FRENESÍ (8 s en que toda la mesa se golpea sola, 90 s) y **GOLDEN RAIN** (80 s de recarga). LEYENDA las recarga el doble de rápido.
+
+### GOLDEN RAIN (sustituye a la lupa del tasador desde 2026-11-12)
+
+- Dura **10 s** (`Gameplay.RAIN_TIME`), **20 s** con el nodo **TORMENTA DORADA** (`RAIN_EXTRA`, 3 monedas, cuelga de la golden rain).
+- Mientras dura, cada sobre que se **compra** (a mano o con el PC) sale marcado (`TableElement.rain`, se guarda con la mesa) y brilla como holo. El dorado y el jefe no cuentan (no se compran).
+- Al romperse un sobre marcado, cada objeto tiene un **30 %** (`RAIN_HOLO_CHANCE`) de salir **HOLO**: `Gameplay.make_holo` pone `holo = true` y **valor ×2** (`HOLO_MULT`).
+- El holo **brilla** con un shader arcoíris (`UIKit.holo`) en la tarjeta, el inventario, la vitrina y el sobre marcado; la tarjeta pone "HOLO <NOMBRE>" y "HOLO: VALE EL DOBLE".
 
 ## Libreta (botón abajo a la izquierda)
 

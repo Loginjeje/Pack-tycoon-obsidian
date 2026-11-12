@@ -43,3 +43,4 @@ Volver a [[00 Inicio]].
 ## Registro del vault
 
 - 2026-11-12: vault creado desde el README y el código. README del juego corregido (monedas, tipos, álbum, teclas, números medidos de nuevo).
+- 2026-11-12 (2): GOLDEN RAIN sustituye a la lupa del tasador (+ nodo TORMENTA DORADA); la mesa ya no guarda objetos (fuera MESA LIMPIA, el botón VENDER y la tecla V); nodos APRENDIZ / AMULETO / ENCARGADO con botón AUTO en la tienda; nombre propio para todos los nodos del árbol. Smoke test (777 checks) e input test en verde. Sin commitear en `juguetes-mito-balance`.
