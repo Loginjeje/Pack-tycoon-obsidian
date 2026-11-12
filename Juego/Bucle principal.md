@@ -10,7 +10,7 @@ Volver a [[00 Inicio]].
 ## Paso a paso
 
 1. **Comprar** — en la columna de sobres de la izquierda (con scroll, 20 filas). Se compra a ciegas y el sobre **cae** en un sitio libre de la mesa (animación de caída, polvo, temblor). Con la mesa llena no se cobra. Ver [[Sobres]].
-2. **Golpear** — clic en el sobre: arranca un **anillo de carga de 1,65 s** que se dibuja detrás del sobre. Cada carga completa es un **golpe** de **45** de daño base (ver [[Tienda]] para las mejoras). El sobre se agrieta en tres tramos; no hay barra de vida.
+2. **Golpear** — clic en el sobre: arranca un **anillo de carga de 1,65 s** que se dibuja detrás del sobre. Mide **400 px** (la parte de color va de 150 a 190 px del centro, fuera de todos los sobres en el tramo del perfecto) y el sobre que empieza a cargar pasa delante de los vecinos. Cada carga completa es un **golpe** de **45** de daño base (ver [[Tienda]] para las mejoras). El sobre se agrieta en tres tramos; no hay barra de vida.
    - **Un clic abre UN sobre**: si otro sobre está a medio abrir, un clic en uno nuevo no hace nada hasta que el primero se rompe. Todos los huecos pueden estar cargando a la vez, pero hay que ir pulsándolos.
    - **Golpe perfecto**: pulsar cuando el anillo pasa del 80 % → golpe inmediato ×1,5 (ver [[Eventos, habilidades y libreta]]).
    - Críticos con el Ojo verde (×2 base, más con el Láser).

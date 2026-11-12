@@ -9,6 +9,7 @@ Volver a [[00 Inicio]].
 
 ## Pantallas
 
+- **Intro** (`intro.gd`, `IntroScreen`, desde 2026-11-12): sale al abrir el juego, antes del menú. Cuento mudo de 5 viñetas estilo *The Binding of Isaac* (~17 s): chaval de noche con el móvil → vídeo vertical tipo TikTok (sobre → carta MITO, "+1.000.000", corazones, comentarios) → ojos de moneda → rompe la hucha → trastienda llena de sobres. **Clic o tecla = saltar.** El chaval es pixel art escrito con letras en el script (`KID`, clase `Pix`). Solo sale si `Main` es la escena principal (los tests de `dev/` van directos al menú).
 - **Menú** (`menu.gd`): JUGAR y AJUSTES, fondo de trastienda. Nada de rebirth aquí.
 - **Partida** (`game.gd`): columna de sobres a la izquierda (fondo negro opaco, raya dorada), mesa (`bg_table`, 1344×752), barra de arriba, vitrina abajo, libreta abajo a la izquierda.
 - **Paneles** (entran con rebote desde el centro): Tienda, Armario, Rebirth/árbol, Libreta, Ajustes, Créditos (desde Ajustes), tarjeta de revelado, mini menú de compra automática, filtro de auto guardar.
@@ -21,7 +22,7 @@ Dinero con su moneda · contador de monedas de rebirth (cerdito dorado pegado al
 
 Volumen (MÚSICA y SONIDOS, deslizadores de pixel art con sus buses), pantalla completa, venta automática, fila de AUTO GUARDAR (gris hasta comprarlo en el árbol; luego botón ELEGIR → `AutoStorePanel` con 5 tipos × 10 notas × 4 rarezas, que caben en el panel desde 2026-11-12; por defecto todos los tipos y rarezas y notas 8-10), y FICHA DEL OBJETO (siempre / lo bueno = épico y legendario / nunca). No hay selector de idioma.
 
-Abajo a la derecha, un botón pequeño **CREDITOS** abre `CreditsPanel` (`credits_panel.gd`): la música de **Stream Cafe** con el enlace del vídeo. El enlace va con la fuente por defecto de Godot (la del juego solo tiene mayúsculas y el id de YouTube distingue mayúsculas) y se puede pulsar para abrirlo. **No quitarlo**: la música es libre solo dando el crédito.
+Abajo a la derecha, dos botones pequeños uno sobre otro: **AYUDA** (fila del auto guardar) abre `HelpPanel` (`help_panel.gd`): anillo de muestra cargando en bucle con la leyenda turquesa (perfecto ×1,5) / blanco (dorado ×1,25 más), y el juego en 5 pasos + teclas; los números salen de `Gameplay` y `LootDB`. Debajo, **CREDITOS** abre `CreditsPanel` (`credits_panel.gd`): la música de **Stream Cafe** con el enlace del vídeo. El enlace va con la fuente por defecto de Godot (la del juego solo tiene mayúsculas y el id de YouTube distingue mayúsculas) y se puede pulsar para abrirlo. **No quitarlo**: la música es libre solo dando el crédito.
 
 ## Teclas (`game.gd::_hotkey`, solo con la mesa despejada)
 

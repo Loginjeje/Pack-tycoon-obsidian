@@ -48,3 +48,4 @@ Volver a [[00 Inicio]].
 - 2026-11-12 (4): FÁBRICA al fondo de su rama (cuelga de ENCARGADO); LEYENDA x2, arriba, sin líneas y oculta hasta tener todo el árbol; líneas del árbol en pixel art azul; zoom con pasos 1/5 y 1/6.
 - 2026-11-12 (5): rama de abajo simétrica: ENCARGADO pasa a la derecha (pide ARMARIO SOLO en vez de AMULETO) y FÁBRICA sube a la fila 4, colgando de AMULETO, SOBRANTE y ENCARGADO.
 - 2026-11-12 (6): música de fondo nueva, el recopilatorio de una hora de **Stream Cafe** (OGG, `Sound.MUSIC`), y botón **CREDITOS** en Ajustes con su crédito y enlace. Smoke test e input test en verde.
+- 2026-11-12 (7): anillo de carga de 320 a 400 px para que el sobre no tape el tramo del perfecto; **intro** estilo Isaac antes del menú (clic para saltar) y botón **AYUDA** en Ajustes encima de CREDITOS. Smoke test e input test en verde. Sin commitear en `juguetes-mito-balance`.
