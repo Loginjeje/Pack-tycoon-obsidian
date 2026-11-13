@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, juego, equilibrio]
-actualizado: 2026-11-12
+actualizado: 2026-11-13
 ---
 
 # Rebirth y árbol de mejoras
@@ -20,7 +20,7 @@ Volver a [[00 Inicio]]. Código: `LootDB.REBIRTH_*`, `scripts/data/skill_tree.gd
 
 **Cada nodo tiene nombre** (`effect` en `SkillTree.NODES`): sale debajo de la chapa y de título en la ficha; el número va en la ficha (AHORA / AL COMPRARLO). En el juego, sin tildes ni Ñ (la fuente no las tiene).
 
-**Cada nodo tiene su propio dibujo** (desde 2026-11-12): `tree_<id>.png` en `Sprites/tree/`, generado por `tools/tree_designs.py` (el objeto del nombre: NUDILLOS puño americano, MAZA maza con pinchos, MARTILLO mazo, CACTUS cactus, ERIZO erizo, FIESTA matasuegras, LEYENDA corona...). Antes reutilizaban sprites del stat (sobre de cartas, zapatillas...).
+**Cada nodo tiene su propio dibujo** (desde 2026-11-12): `tree_<id>.png` en `Sprites/tree/`, generado por `tools/tree_designs.py` (el objeto del nombre: BATE bate de madera, MAZA maza con pinchos, MARTILLO mazo, CACTUS cactus, ERIZO erizo de mar, FIESTA globos, FIEBRE DEL ORO lingote, SOBRANTE bumerán, LEYENDA corona...). Antes reutilizaban sprites del stat (sobre de cartas, zapatillas...).
 
 Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre); zoom con dos lupas (hasta 1/6). Las líneas entre nodos son **pixel art azul** (escalera de celdas con contorno; azul noche cerrado, azul comprable, celeste comprado). **Pulsar un nodo abre su ficha**; se compra con COMPRAR. Cada nodo pide el anterior (`req`, puede ser lista). Colores: dorado comprado, claro latiendo asequible, apagado caro, cerrado bloqueado.
 
@@ -34,7 +34,7 @@ Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre)
 
 | Camino | Anillo 1 (3) | Anillo 2 (5) | Anillo 3 (8) | Final (x1,25) |
 |---|---|---|---|---|
-| **Daño** ↖ | NUDILLOS +20 % | PALANCA +25 % | MAZA +35 % | MARTILLO +60 % (10) |
+| **Daño** ↖ | BATE +20 % | PALANCA +25 % | MAZA +35 % | MARTILLO +60 % (10) |
 | **Velocidad** ↗ | REFLEJOS +20 % | CARRERILLA +25 % | VELOCISTA +35 % | TURBO +60 % (10) |
 | **Pinchos** ↘ | ESPINAS +30 % | CARDO +35 % | CACTUS +50 % | ERIZO +80 % (10) |
 | **Armario** ↙ | ESCAPARATE +2 huecos de armario | → sigue en el camino del rebirth | | |
@@ -90,6 +90,14 @@ Quitados (devuelven sus monedas al cargar, `SkillTree.REFUND`): ATAJOS (1), SIN 
 
 15 monedas. **Pide el árbol entero** (`SkillTree.reqs_of`) y **no se dibuja hasta que tienes todo lo demás** (`RebirthPanel.node_shown`); va sin líneas, como corona. Da **+100 % de dinero, +50 % de daño, velocidad y Pinchos**, y las habilidades recargan el doble de rápido.
 
+## Ascensión (desde 2026-11-12)
+
+Con el árbol **entero** comprado sale el botón morado **ASCENSION** abajo a la izquierda del árbol (`Game.ascension_shown`). Abre una pantalla como la del árbol pero morada, con partículas moradas subiendo (`AscensionPanel`). **ASCENDER** (dos pulsaciones) lo borra **todo**: partida, monedas y árbol del rebirth, contador de rebirths, álbum y lo automático (`Game.do_ascension`). Se quedan los ajustes, las estadísticas y la ascensión. Da **1 punto de ascensión**.
+
+Los puntos se gastan en hexágonos (`AscensionTree`). El primero es **HYPER**: hexágono grande en el centro con una persona morada, 1 punto, **×3 de dinero** (multiplica). Tras ascender una vez el botón sale siempre, para poder entrar a gastar el punto.
+
+Con HYPER sale la tienda de [[Mascotas]] (gachapón), cuya máquina COSMICA se paga con puntos de ascensión.
+
 ## Cuánto dura
 
-Ver [[Números del simulador]]: árbol entero en ~2,0 h (normal, 18 rebirths), 1,2 h (optimizado), 0,8 h (automático). Pensado así para que la futura **ascensión** (rebirth del rebirth) sea una vuelta corta.
+Ver [[Números del simulador]]: árbol entero en ~2,0 h (normal, 18 rebirths), 1,2 h (optimizado), 0,8 h (automático). Pensado así para que la **ascensión** (rebirth del rebirth) sea una vuelta corta.

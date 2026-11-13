@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, proyecto, historial]
-actualizado: 2026-11-12
+actualizado: 2026-11-13
 ---
 
 # Historial
@@ -11,6 +11,10 @@ Volver a [[00 Inicio]].
 
 | Fecha | Commit | Qué |
 |---|---|---|
+| 2026-11-13 | `307d662` | Mascotas: gachapón de 4 máquinas (24 mascotas con dibujo propio y stats variados), panel de ADMIN rehecho (dar y quitar) y tope de la carga en 0,6 s (lo que sobra se vuelve daño) |
+| 2026-11-12 | `ed5098e` | Ascensión: árbol morado con HYPER (×3 de dinero) y sprites nuevos del árbol |
+| 2026-11-12 | `324ea5c` | Música de fondo de Stream Cafe y panel de CRÉDITOS en Ajustes |
+| 2026-11-12 | `7397317` | Golden rain, mesa sin objetos, autocompra de la tienda y árbol con nombres |
 | 2026-11-11 | `49b9c36` | JUGUETES (5.º tipo), escalón MITO y equilibrio para completar el árbol en ~2 h (monedas con raíz cuarta ×7) |
 | 2026-11-11 | `f9db91f` | Atajos de teclado gratis (T/A/R/V) y barras de volumen nuevas |
 | 2026-11-10 | `dc94807` | Árbol: nodos nuevos, finales de camino, LEYENDA y FÁBRICA |
@@ -28,7 +32,7 @@ Volver a [[00 Inicio]].
 
 ## Ramas
 
-- Locales: `main`, `segunda-entrega`, `dopamina`, `juguetes-mito-balance` (la actual).
+- Locales: `main`, `segunda-entrega`, `dopamina`, `juguetes-mito-balance`, `ASCEND` (la actual).
 - Solo remotas: `3d-15oct`, `arbol-rebirth-2d`, `gameplay`, `claude/bugs-y-balance`, `claude/propuesta-objetos-revelado`, `claude/rediseno-sobres`.
 
 ## Cambios de diseño importantes (por qué las cosas son como son)

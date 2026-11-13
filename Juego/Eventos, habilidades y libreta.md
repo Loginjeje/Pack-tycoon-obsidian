@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, juego]
-actualizado: 2026-11-12
+actualizado: 2026-11-13
 ---
 
 # Eventos, habilidades y libreta
@@ -23,6 +23,7 @@ Anunciados con un cartel que baja (`MainRoot.banner`), destello dorado y una fra
 - **Perfecto**: pulsar el sobre cargando cuando el anillo pasa del **80 %** (se pone dorado) → golpe inmediato **×1,5**. Pulsar antes penaliza (`EARLY_PENALTY` 0,15).
 - **Racha**: perfectos seguidos suman **+8 % por paso**, tope 3 pasos.
 - **Zona dorada**: dentro del perfecto, el tramo 92-97 % da **×1,25** más.
+- **Tope de la carga** (desde 2026-11-13): la vuelta del anillo **no baja de 0,6 s** (`Gameplay.MIN_CHARGE`). Sin tope, con piezas al máximo y árbol entero duraba 0,14 s (perfecto de 27 ms) y con mascotas 0,05 s: imposible. Con el tope, perfecto 120 ms y zona dorada 30 ms. La velocidad que pasa del tope **se vuelve daño** en la misma proporción (`Game.speed_overflow`, dentro de `damage_multiplier`): mismo daño por segundo, pero se puede apuntar. `Game.raw_charge_time` es la carga sin tope; el simulador aplica la misma regla.
 - **Combo de apertura**: romper sobres sin dejar pasar **3 s** entre uno y otro sube un 1 % el valor por paso, hasta 10. Los Pinchos no cuentan.
 
 Todo esto se amplía con las ramas de puntería y eventos del [[Rebirth y árbol]].

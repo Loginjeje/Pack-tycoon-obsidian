@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, estado, todo]
-actualizado: 2026-11-12
+actualizado: 2026-11-13
 ---
 
 # Pendiente
@@ -9,7 +9,8 @@ Volver a [[00 Inicio]].
 
 ## Falta por hacer (según el README y el diseño)
 
-- [ ] **Ascensión**: un rebirth del rebirth. Para eso se dejó el árbol entero en ~2 h y el camino del rebirth.
+- [x] **Ascensión**: hecha (botón en el árbol, pantalla morada, HYPER ×3 de dinero). Falta: más hexágonos y equilibrar cuántos puntos da.
+- [x] **Tienda de [[Mascotas]]**: hecha (2026-11-13), cuatro máquinas y 24 mascotas con dibujo propio.
 - [ ] **Logros permanentes** de la cuenta (los encargos son logros cortos de partida).
 - [ ] **Un sonido por material** (hoy el rasgado es igual en cartón que en plástico).
 - [ ] **Violín** como objeto nuevo (prompt en `Sprites/PROMPTS.md`). La cámara ya está.
@@ -18,6 +19,10 @@ Volver a [[00 Inicio]].
 - [ ] Los números siguen siendo sprites (`PixelNumber`), no una fuente.
 
 ## Equilibrio
+
+- [ ] **Mascotas sin simular**: los números de ORO, HIELO y COSMICA están a ojo. Con las 24 al máximo, GOLEM da +800 % de daño y UNICORNIO +800 % de dinero; COSMICA entera pide ~30 puntos de ascensión. `dev/balance.gd` no modela las mascotas.
+- [ ] **Zona dorada con tope**: con la carga en 0,6 s dura 30 ms, todavía muy difícil. Subir `MIN_CHARGE` o ensanchar la zona si se ve imposible.
+- [ ] **Nada en pantalla avisa** de que la velocidad que pasa del tope se vuelve daño (ficha de Guantes, nodos de velocidad).
 
 - [ ] **Medir con el simulador** lo nuevo del 2026-11-12: `dev/balance.gd` no modela la golden rain (holo ×2), la compra automática de la tienda ni que lo que no tiene ficha se venda al momento.
 

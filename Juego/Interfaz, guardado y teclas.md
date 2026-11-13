@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, juego, interfaz]
-actualizado: 2026-11-12
+actualizado: 2026-11-13
 ---
 
 # Interfaz, guardado y teclas
@@ -12,17 +12,19 @@ Volver a [[00 Inicio]].
 - **Intro** (`intro.gd`, `IntroScreen`, desde 2026-11-12): sale al abrir el juego, antes del menú. Cuento mudo de 5 viñetas estilo *The Binding of Isaac* (~17 s): chaval de noche con el móvil → vídeo vertical tipo TikTok (sobre → carta MITO, "+1.000.000", corazones, comentarios) → ojos de dólar (una S verde de 3×5 con la raya en verde oscuro, dibujada en el pixel art) → rompe la hucha → trastienda llena de sobres. **Clic o tecla = saltar.** El chaval es pixel art escrito con letras en el script (`KID`, clase `Pix`). Solo sale si `Main` es la escena principal (los tests de `dev/` van directos al menú).
 - **Menú** (`menu.gd`): JUGAR y AJUSTES, fondo de trastienda. Nada de rebirth aquí.
 - **Partida** (`game.gd`): columna de sobres a la izquierda (fondo negro opaco, raya dorada), mesa (`bg_table`, 1344×752), barra de arriba, vitrina abajo, libreta abajo a la izquierda.
-- **Paneles** (entran con rebote desde el centro): Tienda, Armario, Rebirth/árbol, Libreta, Ajustes, Créditos (desde Ajustes), tarjeta de revelado, mini menú de compra automática, filtro de auto guardar.
+- **Paneles** (entran con rebote desde el centro): Tienda, Armario, Rebirth/árbol, Libreta, Ajustes, Créditos (desde Ajustes), ADMIN (desde Ajustes, solo en depuración), Ascensión, [[Mascotas]], tarjeta de revelado, mini menú de compra automática, filtro de auto guardar.
 
 ### Barra de arriba (izquierda → derecha)
 
-Dinero con su moneda · contador de monedas de rebirth (cerdito dorado pegado al último dígito) · contador de la mesa · iconos de apertura automática, compra automática y ARMARIO · TIENDA · REBIRTH (mismo tamaño que TIENDA) · ajustes. (El botón VENDER se quitó el 2026-11-12: la mesa ya no tiene objetos.)
+Dinero con su moneda · contador de monedas de rebirth (cerdito dorado pegado al último dígito) · contador de la mesa · iconos de apertura automática, compra automática y ARMARIO · MASCOTAS (solo con HYPER, x 1156) · TIENDA · REBIRTH (mismo tamaño que TIENDA) · ajustes. (El botón VENDER se quitó el 2026-11-12: la mesa ya no tiene objetos.)
 
 ### Ajustes (`settings_panel.gd`)
 
 Volumen (MÚSICA y SONIDOS, deslizadores de pixel art con sus buses), pantalla completa, venta automática, fila de AUTO GUARDAR (gris hasta comprarlo en el árbol; luego botón ELEGIR → `AutoStorePanel` con 5 tipos × 10 notas × 4 rarezas, que caben en el panel desde 2026-11-12; por defecto todos los tipos y rarezas y notas 8-10), y FICHA DEL OBJETO (siempre / lo bueno = épico y legendario / nunca). No hay selector de idioma.
 
 Abajo a la derecha, dos botones pequeños uno sobre otro: **AYUDA** (fila del auto guardar) abre `HelpPanel` (`help_panel.gd`): anillo de muestra cargando en bucle con la leyenda turquesa (perfecto ×1,5) / blanco (dorado ×1,25 más), y el juego en 5 pasos + teclas; los números salen de `Gameplay` y `LootDB`. Debajo, **CREDITOS** abre `CreditsPanel` (`credits_panel.gd`): la música de **Stream Cafe** con el enlace del vídeo. El enlace va con la fuente por defecto de Godot (la del juego solo tiene mayúsculas y el id de YouTube distingue mayúsculas) y se puede pulsar para abrirlo. **No quitarlo**: la música es libre solo dando el crédito.
+
+**ADMIN** (`admin_panel.gd`, desde 2026-11-13): botón en Ajustes que **solo sale en depuración** (editor o export con depuración). Trampas para probar: una fila por cosa con su valor y dos botones, rojo **quita** y marrón **da** — dinero (±1000 M), monedas de rebirth (±100), puntos de ascensión (±1), árbol (VACIAR/LLENAR), piezas (A CERO/MAXIMO), mascotas (QUITAR/MAXIMO). No baja de cero; vaciar árbol o piezas apaga lo automático. Cada botón guarda. (Antes los botones medían 600×270 con filas a 120 y se pisaban.)
 
 ## Teclas (`game.gd::_hotkey`, solo con la mesa despejada)
 

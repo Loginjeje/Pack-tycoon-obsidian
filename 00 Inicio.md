@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, indice]
-actualizado: 2026-11-12
+actualizado: 2026-11-13
 ---
 
 # Pack Tycoon — empieza aquí
@@ -26,7 +26,7 @@ permanente.
 | Qué | Dónde |
 |---|---|
 | Proyecto Godot | `C:\Users\Usuario\OneDrive\Escritorio\godot stuff\pack-tycoon` |
-| Repo del juego | `https://github.com/helo842/pack-tycoon.git` (rama de trabajo actual: `juguetes-mito-balance`) |
+| Repo del juego | `https://github.com/helo842/pack-tycoon.git` (rama de trabajo actual: `ASCEND`) |
 | Este vault | `C:\Users\Usuario\OneDrive\Escritorio\godot stuff\Pack tycoon` |
 | Repo del vault | `https://github.com/Loginjeje/Pack-tycoon-obsidian.git` |
 | Godot | `C:\Users\Usuario\AppData\Local\Programs\Godot\Godot_v4.7.2-stable_win64.exe` |
@@ -45,7 +45,8 @@ permanente.
 - [[Botín y notas PSA]] — objetos, rarezas, notas, valor
 - [[Tienda]] — los 10 items y sus fórmulas
 - [[Armario]] — exponer objetos y sus bonus
-- [[Rebirth y árbol]] — monedas y todos los nodos del árbol
+- [[Rebirth y árbol]] — monedas, todos los nodos del árbol y la ascensión
+- [[Mascotas]] — el gachapón: cuatro máquinas, 24 mascotas y lo que da cada una
 - [[Eventos, habilidades y libreta]] — dorado, VIP, hora feliz, jefe, perfectos, álbum, encargos
 - [[Interfaz, guardado y teclas]] — barra, paneles, ajustes, guardado, offline
 
@@ -66,6 +67,8 @@ permanente.
 9. Primer rebirth: **~13,5 min** el jugador normal, ~9 el optimizado, ~8 el automático. Árbol entero: ~2 h.
 10. La interfaz se monta **en código**: las escenas tienen un solo nodo (el editor se ve vacío y es normal).
 11. **En la mesa solo hay sobres**: cada objeto se guarda o se vende al salir, nunca se queda en la mesa.
+12. **Ascensión** (árbol entero → borra todo, da 1 punto) y, con HYPER, la tienda de **[[Mascotas]]**: 4 máquinas de gachapón (1/10/100 monedas o 1 punto de ascensión).
+13. **La carga no baja de 0,6 s** (`Gameplay.MIN_CHARGE`): la velocidad que sobra se vuelve daño, para que el perfecto se pueda acertar siempre.
 
 ## Cómo trabajar en este proyecto (reglas que ya se siguen)
 
