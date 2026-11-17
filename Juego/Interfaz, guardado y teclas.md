@@ -12,6 +12,8 @@ Volver a [[00 Inicio]].
 - **Intro** (`intro.gd`, `IntroScreen`, desde 2026-11-12): sale al abrir el juego, antes del menú. Cuento mudo de 5 viñetas estilo *The Binding of Isaac* (~17 s): chaval de noche con el móvil → vídeo vertical tipo TikTok (sobre → carta MITO, "+1.000.000", corazones, comentarios) → ojos de dólar (una S verde de 3×5 con la raya en verde oscuro, dibujada en el pixel art) → rompe la hucha → trastienda llena de sobres. **Clic o tecla = saltar.** El chaval es pixel art escrito con letras en el script (`KID`, clase `Pix`). Solo sale si `Main` es la escena principal (los tests de `dev/` van directos al menú).
 - **Menú** (`menu.gd`): JUGAR y AJUSTES, fondo de trastienda. Nada de rebirth aquí.
 - **Partida** (`game.gd`): columna de sobres a la izquierda (fondo negro opaco, raya dorada), mesa (`bg_table`, 1344×752), barra de arriba, vitrina abajo, libreta abajo a la izquierda.
+- **Menú de inicio**: título «Pack / Tycoon» con aire entre las dos palabras y **ondulando letra a letra** (`menu.gd`, `_process`), subtítulo, chapas Jugar y Ajustes.
+- **Movimiento** (`UIKit.bob` / `pop_in` / `dust`): los dibujos flotan cada uno a su ritmo (sobres, tienda, mascotas, vitrinas), los de un panel entran uno detrás de otro al abrirlo, polvo flotando en el menú y la mesa, el dinero sube contando y al vender vuelan monedas hasta el contador.
 - **Paneles** (entran con rebote desde el centro): Tienda, Armario, Rebirth/árbol, Libreta, Ajustes, Créditos (desde Ajustes), ADMIN (desde Ajustes, solo en depuración), Ascensión, [[Mascotas]], tarjeta de revelado, mini menú de compra automática, filtro de auto guardar.
 
 ### Barra de arriba (izquierda → derecha)
@@ -46,7 +48,7 @@ Paneles con rebote, sobres que caen y aplastan la mesa, botones que crecen al pa
 - La mesa guardada son **solo sobres** (`{"pack", "hp", "rain"}`). Un objeto que aparezca en `table` (la tarjeta abierta al cerrar, o un guardado viejo con objetos en la mesa) va **al inventario** al cargar (si está lleno, se vende).
 - `user://packtycoon.json`, automático **cada 30 s si cambió algo** y al salir. Antes de guardar copia el anterior a `.bak`; si el principal falla, carga la copia.
 - Las escenas de `dev/` guardan en `packtycoon_test.json` (el smoke test hace `hard_reset()`; el 2026-11-10 se llevó una partida real por delante, por eso existe esto).
-- **Offline**: con el juego cerrado se gana el **10 %** de lo que se ganaba por segundo (`lifetime_earned / play_seconds`), mínimo 60 s fuera, máximo **1 h (2 h con FÁBRICA)**, y **solo con los Pinchos comprados**. Aviso "MIENTRAS NO ESTABAS". Constantes `Game.OFFLINE_*`.
+- **Sin ganancias offline**: con el juego cerrado no se gana nada (el pago por el tiempo fuera se quitó el 2026-11-17).
 
 ## Sonido
 

@@ -16,7 +16,7 @@ Volver a [[00 Inicio]].
 - [ ] **Violín** como objeto nuevo (prompt en `Sprites/PROMPTS.md`). La cámara ya está.
 - [ ] **Selector de idioma** (se quitó porque solo hay español).
 - [ ] **Botón de empezar de cero** en la interfaz (`Game.hard_reset()` existe, solo lo usan los tests).
-- [ ] Los números siguen siendo sprites (`PixelNumber`), no una fuente.
+- [x] Letras: tres en todo el juego (títulos, texto y los números de sprite), elegidas el 2026-11-17.
 
 ## Equilibrio
 

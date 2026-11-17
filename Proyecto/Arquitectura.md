@@ -14,11 +14,11 @@ project.godot   1920x1080 (ventana 1280x720), stretch canvas_items, NEAREST, GL 
                 main_scene = res://scenes/Main.tscn
                 autoloads: Game = scripts/core/game_state.gd, Sound = scripts/core/audio.gd
 scenes/         un .tscn por pantalla, cada uno con UN solo nodo + su script
-  ui/game_theme.tres   tema: fuente font_pack.fnt y colores
+  ui/game_theme.tres   tema: letra de texto font_texto.fnt y colores
 scripts/
   core/         main.gd (MainRoot: cambia de pantalla, velo, overlays, banner, confeti)
                 game_state.gd (autoload Game: dinero, inventario 50, armario, monedas,
-                ajustes, guardado, offline)  ~1.630 líneas
+                ajustes, guardado)  ~1.630 líneas
                 audio.gd (autoload Sound: sfx, música, 3 buses)
                 palette.gd (tokens de color, también los usa el generador de Python)
   data/         loot_db.gd   (LootDB: sobres, botín, PSA, items, armario, rebirth) ~1.250
@@ -50,7 +50,7 @@ Unas 12.600 líneas de GDScript en total.
 - **Quien decide es la pantalla, no la tarjeta:** `RevealCard`, `ItemCard` y `SkillCard` solo **piden** (señal `resolved("store"/"sell"/"later")`, comprar…); `game.gd` / la tienda / el árbol mueven el dinero y suenan.
 - **El audio no conoce el juego:** `Sound` reproduce nombres; `game.gd` decide qué suena.
 - **Clases por `class_name`** (globales), no por ruta.
-- **Números grandes con sprites** (`PixelNumber` compone `num_*.png`); el resto del texto usa la fuente de mapa de bits `font_pack.fnt` (escala solo en múltiplos de 7 px).
+- **Tres letras, ni una más:** títulos (`font_titulo`, trazo doble con contorno y sombra), texto (`font_texto`, mayúsculas y minúsculas con Ñ y tildes, cada letra con su ancho) y números (`PixelNumber`, los dígitos dorados). `UIKit.label` elige título o texto por tamaño (42+) y color; los botones siempre texto; nada baja de 14 px. Las dos letras salen de `tools/make_font.py`.
 - **El anillo de carga** (`TimerRing`) se pinta celda a celda y va **detrás** del sobre.
 - **La mesa solo tiene sobres:** `TableElement` ya no tiene modo "botín" (se quitaron `setup_loot`, `sell_instant`, la señal `sold`…). Lo que sale de un sobre pasa por `_deliver` y acaba en el inventario o vendido.
 - **Animaciones:** `MainRoot.push_veil/push_overlay` (paneles con rebote), `MainRoot.banner` (carteles de eventos), `MainRoot.confetti`, `UIKit.juice()` (ya dentro de todos los botones), `UIKit.punch` y `UIKit.shake`.
@@ -70,7 +70,6 @@ Unas 12.600 líneas de GDScript en total.
 | Bonus del árbol | `Game.skill_bonus(stat)`, `SkillTree.node_bonus(n, stat)` |
 | Encargos | `Gameplay.make_mission`, `mission_step`, `mission_reward`, `mission_packs` |
 | Guardar en inventario | `Game.store(...)` |
-| Pago offline | `game_state.gd` (constantes `OFFLINE_*`) |
 | Atajos de teclado | `game.gd::_hotkey` |
 | Qué pasa con un objeto al salir | `game.gd::_deliver` (auto guardar → venta automática → venta sin ficha → tarjeta) |
 | Golden rain / holo | `Game.rain_left`, `Game.rain_time()`, `Gameplay.make_holo`, `UIKit.holo` (shader) |

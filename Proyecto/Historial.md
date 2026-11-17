@@ -12,6 +12,7 @@ Volver a [[00 Inicio]].
 | Fecha | Commit | Qué |
 |---|---|---|
 | 2026-11-13 | `307d662` | Mascotas: gachapón de 4 máquinas (24 mascotas con dibujo propio y stats variados), panel de ADMIN rehecho (dar y quitar) y tope de la carga en 0,6 s (lo que sobra se vuelve daño) |
+| 2026-11-17 | `049ba4c` | Mascotas x5 y equipar, tres letras, textos en español, armario nuevo, sin offline y animaciones (rama ASCEND) |
 | 2026-11-12 | `ed5098e` | Ascensión: árbol morado con HYPER (×3 de dinero) y sprites nuevos del árbol |
 | 2026-11-12 | `324ea5c` | Música de fondo de Stream Cafe y panel de CRÉDITOS en Ajustes |
 | 2026-11-12 | `7397317` | Golden rain, mesa sin objetos, autocompra de la tienda y árbol con nombres |
@@ -55,3 +56,12 @@ Volver a [[00 Inicio]].
 - 2026-11-12 (7): anillo de carga de 320 a 400 px para que el sobre no tape el tramo del perfecto; **intro** estilo Isaac antes del menú (clic para saltar) y botón **AYUDA** en Ajustes encima de CREDITOS. Smoke test e input test en verde. Sin commitear en `juguetes-mito-balance`.
 - 2026-11-12 (8): en la intro los ojos del chaval se vuelven signos de dólar dibujados en su pixel art (antes, monedas puestas encima).
 - 2026-11-12 (9): un dibujo propio para cada uno de los 38 nodos del árbol (`tools/tree_designs.py` → `Sprites/tree/tree_<id>.png`); ojos de dólar de la intro más bajos (5 px en vez de 7). Smoke e input test en verde.
+- 2026-11-17: tienda de mascotas con **TIRAR X5** y resumen de lo que ha salido al final de la animación. Smoke test e input test en verde.
+- 2026-11-17 (2): la cápsula suelta antes de abrirse un brillito del color de la rareza de lo que lleva.
+- 2026-11-17 (3): destellos del color de la rareza girando alrededor de la cápsula, y el brillo más grande.
+- 2026-11-17 (4): menú **EQUIPAR** en la tienda de mascotas: solo dan bonus las equipadas (3 huecos), se ven todas las que tienes con su nivel y lo que dan. Smoke e input test en verde.
+- 2026-11-17 (5): **textos y letras**: solo tres letras (títulos gruesos, texto en mayúsculas y minúsculas con Ñ y tildes, números dorados); todos los textos reescritos en frase normal con tildes y signos de abrir; nada por debajo de 14 px; frases confusas aclaradas (barra del árbol, nota del armario, ficha de mejora, ajustes). Smoke e input test en verde.
+- 2026-11-17 (6): título del menú separado («Pack» ya no se monta sobre «Tycoon») y con una ola que lo recorre letra a letra.
+- 2026-11-17 (7): fuera el «Primera versión - sin logros todavía» del menú; álbum con página de **colecciones de mascotas** (una por máquina, bonus aunque no estén equipadas); **armario** rehecho con el estilo de cartón de la tienda de mascotas (fichas de papel, vitrinas con lo que dan, nota con el total, Vender todo en la cabecera); botón **Equipar** de mascotas arriba junto al saldo. Smoke e input test en verde.
+- 2026-11-17 (8): **fuera las ganancias offline** (pago por el tiempo con el juego cerrado, aviso «Mientras no estabas» y el «cerrado ganas hasta dos horas» de FÁBRICA). Botón Equipar de mascotas más pequeño.
+- 2026-11-17 (9): **más movimiento**: dibujos que flotan, entrada escalonada al abrir paneles, polvo en el menú y la mesa, contador del dinero que sube contando y monedas que vuelan al vender. Smoke e input test en verde.

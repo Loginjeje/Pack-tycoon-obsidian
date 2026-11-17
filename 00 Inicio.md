@@ -46,9 +46,9 @@ permanente.
 - [[Tienda]] — los 10 items y sus fórmulas
 - [[Armario]] — exponer objetos y sus bonus
 - [[Rebirth y árbol]] — monedas, todos los nodos del árbol y la ascensión
-- [[Mascotas]] — el gachapón: cuatro máquinas, 24 mascotas y lo que da cada una
+- [[Mascotas]] — el gachapón: cuatro máquinas, 24 mascotas, tirada x5, equipar 3 y sus colecciones del álbum
 - [[Eventos, habilidades y libreta]] — dorado, VIP, hora feliz, jefe, perfectos, álbum, encargos
-- [[Interfaz, guardado y teclas]] — barra, paneles, ajustes, guardado, offline
+- [[Interfaz, guardado y teclas]] — barra, paneles, ajustes, guardado
 
 **Equilibrio y estado**
 - [[Números del simulador]] — lo medido con `dev/balance.gd`
@@ -67,7 +67,9 @@ permanente.
 9. Primer rebirth: **~13,5 min** el jugador normal, ~9 el optimizado, ~8 el automático. Árbol entero: ~2 h.
 10. La interfaz se monta **en código**: las escenas tienen un solo nodo (el editor se ve vacío y es normal).
 11. **En la mesa solo hay sobres**: cada objeto se guarda o se vende al salir, nunca se queda en la mesa.
-12. **Ascensión** (árbol entero → borra todo, da 1 punto) y, con HYPER, la tienda de **[[Mascotas]]**: 4 máquinas de gachapón (1/10/100 monedas o 1 punto de ascensión).
+12. **Ascensión** (árbol entero → borra todo, da 1 punto) y, con HYPER, la tienda de **[[Mascotas]]**: 4 máquinas de gachapón (1/10/100 monedas o 1 punto de ascensión), tirada de 1 o x5. Solo dan bonus las **3 equipadas**; tener las 6 de una máquina completa su colección del álbum (bonus aunque no estén equipadas).
+13. **Tres letras** en todo el juego: títulos gruesos, texto en mayúsculas y minúsculas (con Ñ y tildes) y los números dorados. Los textos van en español normal y nada baja de 14 px.
+14. Con el juego **cerrado no se gana nada** (se quitó el offline).
 13. **La carga no baja de 0,6 s** (`Gameplay.MIN_CHARGE`): la velocidad que sobra se vuelve daño, para que el perfecto se pueda acertar siempre.
 
 ## Cómo trabajar en este proyecto (reglas que ya se siguen)

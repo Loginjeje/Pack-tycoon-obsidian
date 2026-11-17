@@ -31,6 +31,6 @@ Conclusión de diseño: mezclar tipos es mejor que llenar de uno solo (medido co
 ## Interfaz
 
 - En la partida, la tira de abajo es **la vitrina** (lo expuesto de un vistazo; cada hueco abre el panel). La chapa ARMARIO va en la barra de arriba junto a las automatizaciones. Atajo `A`.
-- Panel: **inventario a la izquierda** (50 huecos, scroll) y **vitrinas a la derecha** con la suma de cada bonus y **VENDER TODO**.
+- Panel con el **estilo de cartón de la tienda de mascotas** (desde 2026-11-17): cinta roja «Armario», **inventario a la izquierda** en fichas de papel (50 huecos, scroll; dibujo grande y valor), **vitrinas a la derecha** como fichas con celo (objeto, lo que da y lo que vale; las cerradas, apagadas con «Cerrado»), nota de papel «Lo que te da» con el total por tipo y **Vender todo** en la cabecera.
 - Inventario: clic izquierdo = exponer, clic derecho = vender ese objeto. Clic en una vitrina = devolver al inventario.
 - **ARMARIO SOLO** (árbol): con el armario lleno, entra la mejor pieza de su tipo y la peor vuelve; nunca empeora el armario.
