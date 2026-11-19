@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, juego, equilibrio]
-actualizado: 2026-11-13
+actualizado: 2026-11-19
 ---
 
 # Mascotas (el gachapón)
@@ -30,7 +30,7 @@ Números **por nivel** (×5 al máximo):
 
 ## Cómo se ve
 
-- **Panel** (estilo cartón de la tienda): a la izquierda la página (nombre de la máquina entre dos flechas y "2/4"), la máquina y **TIRAR n** con el icono de lo que se paga (cerdito o estrella morada); a la derecha seis fichas de papel con la mascota (en silueta si no la tienes), cinco puntos de nivel y lo que da. Arriba a la derecha el saldo (monedas o puntos de ascensión, según la máquina).
+- **Panel** (estilo cartón de la tienda): a la izquierda la página (nombre de la máquina entre dos flechas y "2/4"), la máquina, **Tirar 1** y **Tirar x5** con el icono de lo que se paga (cerdito o estrella morada); a la derecha seis fichas de papel con la mascota (en silueta si no la tienes), cinco puntos de nivel y lo que da. Arriba a la derecha el saldo (monedas o puntos de ascensión, según la máquina).
 - **Dibujos**: las 24 mascotas tienen dibujo propio (el usuario pidió mascotas distintas, no las mismas recoloreadas). Las máquinas de oro, hielo y cósmica sí son la de siempre repintada (`_Recolor`, por luminancia).
 - **La tirada** se ve en grande en el **centro de la pantalla**, como la carta de la intro (sin letrero arriba): todo se oscurece, la cápsula cae rebotando, tiembla tres veces cada vez más fuerte (con un **brillito del color de su rareza** y seis destellos de ese color girando alrededor de la cápsula, que crecen en cada temblor; en la x5 cada cápsula el suyo) y revienta en un destello blanco; sale la mascota con rebote y flotando, con **dos brillos del color de su rareza** girando detrás (en modo suma de luz) y chispas de ese color; debajo "¡Nueva mascota!" o el nivel, el nombre, la rareza y lo que da. **Clic, Espacio o Esc** lo cierra.
 - **TIRAR X5**, al lado de TIRAR: cinco tiradas de golpe (pide tener para las cinco; si la máquina se llena a medias para ahí y no cobra lo que no sale). Caen cinco cápsulas en fila, revientan a la vez y al final queda **el resumen**: cada mascota que ha salido con su brillo, las repetidas juntas ("x2 · nivel 3"), "¡Nueva!" o el nivel con que se queda y lo que da (`PetPanel._play_capsules`). La fuente no tiene x minúscula: se escribe X.
@@ -38,7 +38,7 @@ Números **por nivel** (×5 al máximo):
 ## Menú EQUIPAR
 
 - Botón **EQUIPAR** arriba en la cabecera de la tienda de mascotas, al lado del saldo. La X o Esc vuelve a las máquinas.
-- Solo dan bonus las **equipadas**: **3 huecos** (`PetDB.SLOTS`). Una mascota nueva se equipa sola si queda hueco. Las equipadas se guardan (`pets_equipped`) y sobreviven a la ascensión; un guardado antiguo entra con las primeras que tenga.
+- Solo dan bonus las **equipadas**: **3 huecos** (`PetDB.SLOTS`), 4 con el **Collar** de la telaraña (`Game.pet_slots`). Una mascota nueva se equipa sola si queda hueco. Las equipadas se guardan (`pets_equipped`) y sobreviven a la ascensión; un guardado antiguo entra con las primeras que tenga.
 - Izquierda: los 3 huecos (nivel, dibujo, nombre y lo que da, o VACIO) y una nota de papel con **lo que te dan** entre todas, stat a stat.
 - Derecha: **todas las que tienes**, 6 por fila, con el nivel encima ("Nv 3" / "Nv max") y lo que dan a ese nivel; marco dorado si están equipadas. Clic para poner/quitar; con los huecos llenos avisa "Huecos llenos: quita una". Con el ratón encima: nombre y bonus en largo.
 

@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, estado, todo]
-actualizado: 2026-11-13
+actualizado: 2026-11-19
 ---
 
 # Pendiente
@@ -9,7 +9,7 @@ Volver a [[00 Inicio]].
 
 ## Falta por hacer (según el README y el diseño)
 
-- [x] **Ascensión**: hecha (botón en el árbol, pantalla morada, HYPER ×3 de dinero). Falta: más hexágonos y equilibrar cuántos puntos da.
+- [x] **Ascensión**: hecha (botón en el árbol, pantalla morada, HYPER ×3 de dinero). Desde 2026-11-19 es una **telaraña** de 19 hexágonos (farm, automático, herencia y estrellas). Falta: equilibrarla.
 - [x] **Tienda de [[Mascotas]]**: hecha (2026-11-13), cuatro máquinas y 24 mascotas con dibujo propio.
 - [ ] **Logros permanentes** de la cuenta (los encargos son logros cortos de partida).
 - [ ] **Un sonido por material** (hoy el rasgado es igual en cartón que en plástico).
@@ -19,6 +19,8 @@ Volver a [[00 Inicio]].
 - [x] Letras: tres en todo el juego (títulos, texto y los números de sprite), elegidas el 2026-11-17.
 
 ## Equilibrio
+
+- [ ] **Telaraña de la ascensión sin simular** (2026-11-19): 60 puntos para la telaraña entera (más la máquina cósmica), con 1-7 puntos por ascensión según las Estrellas. Hay que ver cuánto dura cada ascensión con HYPER y los automáticos.
 
 - [ ] **Mascotas sin simular**: los números de ORO, HIELO y COSMICA están a ojo. Con las 24 al máximo, GOLEM da +800 % de daño y UNICORNIO +800 % de dinero; COSMICA entera pide ~30 puntos de ascensión. `dev/balance.gd` no modela las mascotas.
 - [ ] **Zona dorada con tope**: con la carga en 0,6 s dura 30 ms, todavía muy difícil. Subir `MIN_CHARGE` o ensanchar la zona si se ve imposible.
@@ -32,7 +34,7 @@ Volver a [[00 Inicio]].
 
 ## Desfases encontrados al hacer el vault (2026-11-12)
 
-- [ ] El comentario de `SPIKE_SHARE` habla de "el 60 %", pero la constante vale 1,0.
+- [x] El comentario de `SPIKE_SHARE` habla de "el 60 %", pero la constante vale 1,0 (arreglado el 2026-11-19).
 - [ ] `Game.FIRST_REBIRTH_COINS = 3` ya no hace nada (con la raíz cuarta ×7, el primer rebirth da 7 como poco).
 - Los `.import` del proyecto salen modificados en git (reimportación del editor); no son cambios de juego.
 

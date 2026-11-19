@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, proyecto, historial]
-actualizado: 2026-11-13
+actualizado: 2026-11-19
 ---
 
 # Historial
@@ -11,6 +11,9 @@ Volver a [[00 Inicio]].
 
 | Fecha | Commit | Qué |
 |---|---|---|
+| 2026-11-19 | `26d7eeb` | Árbol del rebirth con dos clics y franja de ficha, como la telaraña (fuera SkillCard) |
+| 2026-11-19 | `26d7eeb` | Tienda pro tras ascender (pestañas en la columna de sobres, 4 cajas nuevas con 16 objetos nuevos) |
+| 2026-11-19 | `26d7eeb` | Telaraña de la ascensión (24 hexágonos nuevos en cuatro anillos: farm, automáticos con Perfección, herencia con Legado y estrellas; se navega con arrastre y zoom) y arreglos: icono de la estrella en el botón Ascensión, atajos con paneles abiertos, textos |
 | 2026-11-13 | `307d662` | Mascotas: gachapón de 4 máquinas (24 mascotas con dibujo propio y stats variados), panel de ADMIN rehecho (dar y quitar) y tope de la carga en 0,6 s (lo que sobra se vuelve daño) |
 | 2026-11-17 | `049ba4c` | Mascotas x5 y equipar, tres letras, textos en español, armario nuevo, sin offline y animaciones (rama ASCEND) |
 | 2026-11-12 | `ed5098e` | Ascensión: árbol morado con HYPER (×3 de dinero) y sprites nuevos del árbol |

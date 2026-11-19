@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, juego, equilibrio]
-actualizado: 2026-11-12
+actualizado: 2026-11-19
 ---
 
 # Sobres
@@ -50,3 +50,19 @@ Volver a [[00 Inicio]]. Datos: `LootDB.PACKS` en `scripts/data/loot_db.gd`.
 - El **Dólar** abarata todos los sobres un 5 % por nivel. El sobre gratis es el seguro para no quedarse nunca sin nada que abrir.
 
 Ver también [[Botín y notas PSA]].
+
+## Tienda pro (desde 2026-11-19)
+
+Tras ascender una vez (`Game.pro_shop_shown`) la columna de sobres tiene dos pestañas arriba: **Tienda** y **Tienda pro** (morada). Antes de ascender no salen. Cuatro cajas nuevas (`LootDB.PRO_PACKS`) con dibujo y botín propios (16 objetos nuevos, con sus diez notas):
+
+| Caja | Precio | Botín (común → legendario) | Tipo |
+|---|---|---|---|
+| Galería | 61 M | Boceto, Grabado, Cuadro al óleo, Obra maestra | cartas (daño) |
+| Estudio | 113 M | Cinta master, Disco de oro, Guitarra firmada, Disco de platino | vinilos (dinero) |
+| Garaje | 210 M | Casco, Llanta cromada, Moto clásica, Coche clásico | zapatillas (velocidad) |
+| Bóveda | 390 M | Moneda antigua, Collar de perlas, Huevo enjoyado, Corona | juguetes (suerte) |
+
+- Por encima del techo normal (33 M), escalera ×1,85. Pagan un **45 %** (`PRO_MARGIN`, los normales 32-35 %) y su botín cuenta como **escalón 5** en el armario (×2,8).
+- Botín de tipos existentes a propósito (armario, auto guardar, hora feliz y VIP van por tipo). No entra en el álbum.
+- La compra automática, el sobre dorado y los encargos no las ven (recorren `LootDB.PACKS`).
+

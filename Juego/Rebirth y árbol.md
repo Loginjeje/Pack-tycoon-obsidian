@@ -1,6 +1,6 @@
 ---
 tags: [pack-tycoon, juego, equilibrio]
-actualizado: 2026-11-13
+actualizado: 2026-11-19
 ---
 
 # Rebirth y árbol de mejoras
@@ -22,7 +22,7 @@ Volver a [[00 Inicio]]. Código: `LootDB.REBIRTH_*`, `scripts/data/skill_tree.gd
 
 **Cada nodo tiene su propio dibujo** (desde 2026-11-12): `tree_<id>.png` en `Sprites/tree/`, generado por `tools/tree_designs.py` (el objeto del nombre: BATE bate de madera, MAZA maza con pinchos, MARTILLO mazo, CACTUS cactus, ERIZO erizo de mar, FIESTA globos, FIEBRE DEL ORO lingote, SOBRANTE bumerán, LEYENDA corona...). Antes reutilizaban sprites del stat (sobre de cartas, zapatillas...).
 
-Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre); zoom con dos lupas (hasta 1/6). Las líneas entre nodos son **pixel art azul** (escalera de celdas con contorno; azul noche cerrado, azul comprable, celeste comprado). **Pulsar un nodo abre su ficha**; se compra con COMPRAR. Cada nodo pide el anterior (`req`, puede ser lista). Colores: dorado comprado, claro latiendo asequible, apagado caro, cerrado bloqueado.
+Se arrastra con el ratón (los nodos no son botones para no comerse el arrastre); zoom con dos lupas (hasta 1/6), que van dentro de la franja de abajo. Las líneas entre nodos son **pixel art azul** (escalera de celdas con contorno; azul noche cerrado, azul comprable, celeste comprado). **Dos clics, como en la telaraña** (desde 2026-11-19): el primero **elige** el nodo (marco dorado) y su ficha sale en la **franja de abajo** (nombre y precio o qué falta, lo que hace, "Ahora X; después, Y"; la explicación larga en su tooltip); **el segundo lo compra**, igual que el botón COMPRAR de la franja. Se abre sin nada elegido. La ficha a pantalla completa (`SkillCard`) se borró. Cada nodo pide el anterior (`req`, puede ser lista). Colores: dorado comprado, claro latiendo asequible, apagado caro, cerrado bloqueado.
 
 ### Centro
 
@@ -94,7 +94,20 @@ Quitados (devuelven sus monedas al cargar, `SkillTree.REFUND`): ATAJOS (1), SIN 
 
 Con el árbol **entero** comprado sale el botón morado **ASCENSION** abajo a la izquierda del árbol (`Game.ascension_shown`). Abre una pantalla como la del árbol pero morada, con partículas moradas subiendo (`AscensionPanel`). **ASCENDER** (dos pulsaciones) lo borra **todo**: partida, monedas y árbol del rebirth, contador de rebirths, álbum y lo automático (`Game.do_ascension`). Se quedan los ajustes, las estadísticas y la ascensión. Da **1 punto de ascensión**.
 
-Los puntos se gastan en hexágonos (`AscensionTree`). El primero es **HYPER**: hexágono grande en el centro con una persona morada, 1 punto, **×3 de dinero** (multiplica). Tras ascender una vez el botón sale siempre, para poder entrar a gastar el punto.
+Los puntos se gastan en **la telaraña** (`AscensionTree`, desde 2026-11-19): **HYPER** en el centro (persona morada, 1 punto, **×3 de dinero**, exagerado a propósito para que la segunda ascensión llegue antes) y **seis hilos** de cuatro anillos, unidos por los hilos de la red. Cada nodo pide el de dentro de su hilo. Anillo 1 = 1 punto, 2 = 2, 3 = 3, 4 = 4 (`RING_COST`). Tras ascender una vez el botón sale siempre, para poder entrar a gastar los puntos.
+
+| Hilo | Anillo 1 (1) | Anillo 2 (2) | Anillo 3 (3) | Anillo 4 (4) |
+|---|---|---|---|---|
+| **Dinero** → | Bolsa ×1,5 | Cofre ×2 | Supernova ×3 | Galaxia ×5 |
+| **Rebirth** ↘ | Eco ×1,5 monedas | Atajo: requisito −30 % | Big bang ×2 monedas | Multiverso ×3 monedas |
+| **Automático** ↙ | Piloto: habilidades solas | Jardinero: compra sola el nodo más barato del árbol | Auto rebirth: rebirth solo con 16× el requisito (el doble de monedas), solo mientras falte algo del árbol del rebirth | Perfección: todos los golpes perfectos solos (zona dorada) |
+| **Herencia** ← | Recuerdo: no se pierde el álbum | Herencia: se guardan calidad de vida y habilidades del árbol | Semilla: cada partida empieza con 250.000 de dinero más (por debajo del requisito con todas las rebajas, ~394.000) | Legado: rebirth y ascensión no quitan el armario |
+| **Estrellas** ↖ | Estrella doble: +1 punto por ascensión | Collar: +1 hueco de mascota | Constelación: +2 puntos por ascensión | Nebulosa: +3 puntos por ascensión |
+| **Golpe** ↗ | Fuerza ×1,5 daño | Rayo ×1,5 velocidad | Cometa ×2 daño y pinchos | Meteorito ×3 daño |
+
+- Efectos: `"mult"` multiplica (`Game.asc_mult`), `"add"` suma (`Game.asc_add`), `"flag"` (`Game.asc_flag`). Los automáticos son **interruptores** (`Game.toggle_asc`, apagados en `asc_off`, se guarda). Corren una vez por segundo con la mesa despejada (`_asc_auto_step` en `game.gd`). Jardinero gasta las monedas que irían a las mascotas: por eso se puede apagar.
+- Pantalla: la telaraña es más grande que la vista y **se navega** (arrastrar, rueda o lupas; zoom 0,3 a 1, abre a 0,65). Nombres bajo cada hexágono y de cada hilo fuera. Pulsar un hexágono lo **elige** (marco lila) y su ficha sale en la franja de abajo (nombre, lo que da, precio y qué pide, botón COMPRAR / ENCENDER / APAGAR); pulsar otra vez el elegido lo compra. Cada hexágono tiene su dibujo `tree_asc_*`.
+- Costes a ojo: `dev/balance.gd` no simula la ascensión.
 
 Con HYPER sale la tienda de [[Mascotas]] (gachapón), cuya máquina COSMICA se paga con puntos de ascensión.
 
